@@ -1,6 +1,8 @@
 # Immu-Age
 A machine learning model for predicting immune age
 
+![image](https://github.com/aapupu/Immu-Age/blob/abe7564596203b20b2e05ae012aaa154db7eafed/img/1702047552565.jpg)
+
 Tutorial
 -------
 git clone
