@@ -20,4 +20,10 @@ python ....py --path/to/exp -cuda y
 python ....py --path/to/exp --cuda n
 ```
 
+Citation
+-------
+..............
 
+Contacts
+-------
+kyzy850520@163.com
