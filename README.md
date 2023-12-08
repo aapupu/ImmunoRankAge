@@ -5,7 +5,7 @@ Tutorial
 -------
 git clone
 ```bash
-git clone git://github.com/.....
+git clone [git://github.com/.....](https://github.com/aapupu/Immu-Age.git)
 ```
 It is recommended to create a new conda environment to run this model.
 ```bash
