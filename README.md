@@ -12,7 +12,6 @@ A machine learning model for predicting immune age
 - numpy == 1.21.6
 - pandas == 1.3.5
 - pytorch-tabnet == 4.0
-- 
 
 Tutorial
 -------
