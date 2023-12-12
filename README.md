@@ -11,7 +11,7 @@ git clone git://github.com/aapupu/Immu-Age.git
 ```
 It is recommended to create a new conda environment to run this model.
 ```bash
-bash ...s.sh
+cd Immu-Age
 ```
 **cuda** is avaliable
 ```bash
