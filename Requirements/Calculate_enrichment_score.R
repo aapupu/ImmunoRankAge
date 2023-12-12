@@ -32,7 +32,7 @@ if (length(args)!=2){
     enrich_genelist[[i]] <- as.character(na.omit(enrich_select_df[[i]]))
   }
   
-  es_TPM <- rankEnrich(as.matrix(rnaseq),genelist = enrich_genelist)
+  es_TPM <- as.data.frame(t(rankEnrich(as.matrix(rnaseq),genelist = enrich_genelist)))
   write.csv(es_TPM,file = 'enrich_score.csv')
   
   print('Enrichment scoring is complete.')
