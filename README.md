@@ -7,6 +7,8 @@ A machine learning model for predicting immune age
 ## Requirements 
 
 - R == 4.1.0
+- data.table == 1.14.6
+- matrixStats == 0.63.0
 - python == 3.7.3
 - pytorch == 1.14.0
 - numpy == 1.21.6
