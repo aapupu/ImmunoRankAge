@@ -6,12 +6,12 @@ A machine learning model for predicting immune age
 
 Requirements
 -------
-   R == 4.1.0
-   python == 3.7.3
-   pytorch == 1.14.0
-   numpy == 1.21.6
-   pandas == 1.3.5
-   pytorch-tabnet == 4.0
+*R == 4.1.0
+*python == 3.7.3
+*pytorch == 1.14.0
+*numpy == 1.21.6
+*pandas == 1.3.5
+*pytorch-tabnet == 4.0
 
 
 Tutorial
