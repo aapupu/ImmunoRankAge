@@ -1,5 +1,5 @@
 args = commandArgs(trailingOnly=TRUE)
-source('function.R')
+source('Requirements/function.R')
 library(data.table)
 
 if (length(args)!=2){
