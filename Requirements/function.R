@@ -45,6 +45,7 @@ countToTpm <- function(counts, effLen, batch){
 TpmNorm <- function(data_exp,exp_len) {
   data_TPM <-apply(data_exp, 2, function(x) {
     countToTpm(x, exp_len$Length)
-  }) %>% as.data.frame()
+  })
+  data_TPM <- as.data.frame(data_TPM)
   return(data_TPM)
 }
