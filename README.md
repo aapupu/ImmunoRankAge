@@ -9,7 +9,7 @@ git clone
 ```bash
 git clone git://github.com/aapupu/Immu-Age.git
 ```
-It is recommended to create a new conda environment to run this model.
+Run in Immu-Age folder
 ```bash
 cd Immu-Age
 ```
