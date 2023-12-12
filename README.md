@@ -12,6 +12,7 @@ A machine learning model for predicting immune age
 - numpy == 1.21.6
 - pandas == 1.3.5
 - pytorch-tabnet == 4.0
+  
 
 Tutorial
 -------
@@ -19,10 +20,12 @@ git clone
 ```bash
 git clone git://github.com/aapupu/Immu-Age.git
 ```
+
 Run in Immu-Age folder
 ```bash
 cd Immu-Age
 ```
+
 Run Immu-Age
 ```bash
 python immu_age_main.py --file_path /path/to/RNAseq.txt --norwayname tpm/count
@@ -30,7 +33,7 @@ python immu_age_main.py --file_path /path/to/RNAseq.txt --norwayname tpm/count
 
 Citation
 -------
-..............
+.............. 
 
 Contacts
 -------
