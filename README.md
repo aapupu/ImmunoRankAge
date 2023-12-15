@@ -20,7 +20,7 @@ Tutorial
 -------
 git clone
 ```bash
-git clone git://github.com/aapupu/Immu-Age.git
+git clone git://github.com/aapupu/ImmunoRankAge.git
 ```
 
 Run in ImmunoRankAge folder
