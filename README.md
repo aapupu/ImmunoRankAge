@@ -30,11 +30,11 @@ cd ImmunoRankAge
 
 Run ImmunoRankAge
 ```bash
-python immu_age_main.py --file_path /path/to/RNAseq.txt --norwayname tpm/count
+python ImmunoRankAge_main.py --file_path /path/to/RNAseq.txt --norwayname tpm/count
 ```
 
 ## Output 
-out.csv & enrich.csv
+outs.csv & enrich_score.csv
 
 Citation
 -------
