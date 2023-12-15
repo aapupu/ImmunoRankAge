@@ -1,4 +1,4 @@
-# Immu-Age
+# ImmunoRankAge
 A machine learning model for predicting immune age
 
 ![image](https://github.com/aapupu/Immu-Age/blob/abe7564596203b20b2e05ae012aaa154db7eafed/img/1702047552565.jpg)
@@ -25,13 +25,16 @@ git clone git://github.com/aapupu/Immu-Age.git
 
 Run in Immu-Age folder
 ```bash
-cd Immu-Age
+cd ImmunoRankAge
 ```
 
 Run Immu-Age
 ```bash
 python immu_age_main.py --file_path /path/to/RNAseq.txt --norwayname tpm/count
 ```
+
+## Output 
+out.csv 
 
 Citation
 -------
