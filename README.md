@@ -1,7 +1,7 @@
 # ImmunoRankAge
 A machine learning model for predicting immune age by rank-enrich algorithm
 
-![image]([https://github.com/aapupu/ImmunoRankAge/img/ImmunoRankAge.jpg](https://github.com/aapupu/ImmunoRankAge/blob/main/img/ImmunoRankAge.jpg))
+![image](https://github.com/aapupu/ImmunoRankAge/blob/main/img/ImmunoRankAge.jpg)
 
 
 ## Requirements 
