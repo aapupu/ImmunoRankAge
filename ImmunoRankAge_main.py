@@ -11,7 +11,7 @@ args = parser.parse_args()
 
 def Enrich(file_path, norwayname):
     run="Rscript Requirements/Calculate_enrichment_score.R " + file_path + " " + norwayname
-    print(run)
+    #print(run)
     os.system(run)
 
 
