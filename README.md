@@ -1,5 +1,5 @@
 # ImmunoRankAge
-A machine learning model for predicting immune age
+A machine learning model for predicting immune age by rank-enrich algorithm
 
 ![image](https://github.com/aapupu/Immu-Age/blob/abe7564596203b20b2e05ae012aaa154db7eafed/img/1702047552565.jpg)
 
@@ -23,18 +23,18 @@ git clone
 git clone git://github.com/aapupu/Immu-Age.git
 ```
 
-Run in Immu-Age folder
+Run in ImmunoRankAge folder
 ```bash
 cd ImmunoRankAge
 ```
 
-Run Immu-Age
+Run ImmunoRankAge
 ```bash
 python immu_age_main.py --file_path /path/to/RNAseq.txt --norwayname tpm/count
 ```
 
 ## Output 
-out.csv 
+out.csv & enrich.csv
 
 Citation
 -------
