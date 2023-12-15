@@ -23,7 +23,9 @@ def AgePredict():
     x = np.array(features)
     y = reg.predict(np.array(x)).squeeze(1)
 
-    features['Age_pre'] = y
+    outs = pd.DataFrame(data=list(y), 
+                  index = list(features.index),
+                  columns=['Age_pre'])
     features.to_csv('outs.csv')
 
 
@@ -32,7 +34,7 @@ if __name__ == '__main__':
     
     Enrich(args.file_path, args.norwayname)
     AgePredict()
-    os.remove('enrich_score.csv')
+    #os.remove('enrich_score.csv')
     
     end_total_time = time.time()
     elapsed_total_time = end_total_time - start_total_time
