@@ -26,7 +26,7 @@ def AgePredict():
     outs = pd.DataFrame(data=list(y), 
                   index = list(features.index),
                   columns=['Age_pre'])
-    features.to_csv('outs.csv')
+    outs.to_csv('outs.csv')
 
 
 if __name__ == '__main__': 
