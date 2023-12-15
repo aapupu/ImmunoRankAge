@@ -18,7 +18,7 @@ A machine learning model for predicting immune age by rank-enrich algorithm
 
 Tutorial
 -------
-git clone
+Git clone
 ```bash
 git clone git://github.com/aapupu/ImmunoRankAge.git
 ```
@@ -38,7 +38,7 @@ outs.csv & enrich_score.csv
 
 Citation
 -------
-.............. 
+.
 
 Contacts
 -------
