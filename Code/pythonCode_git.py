@@ -47,7 +47,6 @@ selected_features = multicollinearity_filter(GO_es_train,
 GO_es_train = GO_es_train.drop(columns=selected_features)
 
 # model train
-
 unsupervised_model = TabNetPretrainer(
     cat_emb_dim=3,
     optimizer_fn=torch.optim.Adam,
