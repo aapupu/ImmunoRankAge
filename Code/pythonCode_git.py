@@ -5,14 +5,14 @@ from pytorch_tabnet.pretraining import TabNetPretrainer
 import torch
 from pytorch_tabnet.tab_model import TabNetRegressor
 
-# scRNA-seq data Integrate
+# scRNA-seq data integrate
 adata = SCALEX(data_list=file_list, # file list of scRNAseq
                batch_categories=batch, # batch information of scRNAseq
               outdir='/path/to/output',
               n_top_features=2000,
               min_cells=3, min_features=0, batch_size=256)
 
-# multicollinearity_filter
+# multicollinearity filter
 def set_diagonal_to_zero(df):
     arr = df.values
     np.fill_diagonal(arr, 0)
