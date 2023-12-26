@@ -10,11 +10,3 @@ samtools sort -@ 20 -o "${output_folder}/${SampleName}_sorted.bam" "${output_fol
 samtools index -@ 20 "${output_folder}/${SampleName}_sorted.bam"
 
 featureCounts -p -t exon -g gene_id -T 40 -a "$gtf_file" -o "${output_folder}/${SampleName}_counts.txt" "${output_folder}/${SampleName}_sorted.bam"	
-
-# mixcr
-mixcr analyze rna-seq \
-	--species hsa \
-    "${output_folder}/${Al_fq1}" \
-    "${output_folder}/${Al_fq2}" \
-    "${output_folder}"/mixcr_outs/"${SampleName}" \
-	-t 20
