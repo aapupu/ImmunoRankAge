@@ -14,6 +14,7 @@ A machine learning model for predicting immune age by rank-enrichment algorithm
 - numpy == 1.21.6
 - pandas == 1.3.5
 - pytorch-tabnet == 4.0
+- 
 **Note : If cuda is available, it will be used automatically.**
   
 
