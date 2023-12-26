@@ -61,30 +61,30 @@ res.DEswan_10=DEswan(data.df =  t(combat_data),
                      covariates = HC_inform$Sex2,
                      buckets.size = 20)
 
-# Gini Clonality Shannon_index
-gini_coef <- function(TCR_df) {
-  sorted_df <- TCR_df[order(TCR_df$Fraction, decreasing = TRUE), ]
+# # Gini Clonality Shannon_index
+# gini_coef <- function(TCR_df) {
+#   sorted_df <- TCR_df[order(TCR_df$Fraction, decreasing = TRUE), ]
   
-  sorted_df$Fraction_2 <- cumsum(sorted_df$Fraction)
+#   sorted_df$Fraction_2 <- cumsum(sorted_df$Fraction)
   
-  total_freq <- sum(sorted_df$Fraction)
+#   total_freq <- sum(sorted_df$Fraction)
   
-  gini_coef <- 1 - (sum((sorted_df$Fraction_2 / total_freq) * (2 * (1:(nrow(sorted_df)) - 1) - nrow(sorted_df))) / nrow(sorted_df))
+#   gini_coef <- 1 - (sum((sorted_df$Fraction_2 / total_freq) * (2 * (1:(nrow(sorted_df)) - 1) - nrow(sorted_df))) / nrow(sorted_df))
   
-  return(gini_coef)
-}
+#   return(gini_coef)
+# }
 
-Shannon_index <- function(list_p){
-  sum=0
-  for (p in list_p){
-    sum <- p*log(p) + sum
-  }
-  H <- -sum
-  return(H)
-}
+# Shannon_index <- function(list_p){
+#   sum=0
+#   for (p in list_p){
+#     sum <- p*log(p) + sum
+#   }
+#   H <- -sum
+#   return(H)
+# }
 
-clonality <- function(diversity,richness){
-  E<- diversity/log(richness)
-  C <- 1-E
-  return(C)
-}
+# clonality <- function(diversity,richness){
+#   E<- diversity/log(richness)
+#   C <- 1-E
+#   return(C)
+# }
