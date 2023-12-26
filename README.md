@@ -14,7 +14,7 @@ A machine learning model for predicting immune age by rank-enrichment algorithm
 - numpy == 1.21.6
 - pandas == 1.3.5
 - pytorch-tabnet == 4.0
-- 
+  
 **Note : If cuda is available, it will be used automatically.**
   
 
@@ -37,8 +37,8 @@ python ImmunoRankAge_main.py --file_path /path/to/RNAseq.txt --norwayname tpm/co
 
 ## Output 
 
-- outs.csv: Predicted immune age of sample.
-- enrich_score.csv: Enrichment score of input feature by rank-enrichment algorithm.
+- outs.csv: predicted immune age of sample.
+- enrich_score.csv: enrichment score of input feature by rank-enrichment algorithm.
 
 
 Citation
