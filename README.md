@@ -15,7 +15,8 @@ A machine learning model for predicting immune age by rank-enrichment algorithm
 - pandas == 1.3.5
 - pytorch-tabnet == 4.0
   
-**Note : If cuda is available, it will be used automatically.**
+**Note : This model, operating in both CPU and GPU modes, quickly predicts over 200 samples in less than 10 seconds.
+If cuda is available, it will be used automatically.**
   
 
 Tutorial
