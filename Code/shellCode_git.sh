@@ -1,4 +1,6 @@
 # RNAseq process
+fastqc -t 20 -o "$output_folder/fastqc_output" "$FQ1" "$FQ2"
+
 trim_galore -j 20 -q 25 --phred33 --length 36 -e 0.1 --stringency 3 --paired "$FQ1" "$FQ2" -o "$output_folder"
 
 hisat2 -p 20 -x "$genome_index" -1 "${output_folder}/${Al_fq1}" -2 "${output_folder}/${Al_fq2}" -S "${output_folder}/${SampleName}.sam"
