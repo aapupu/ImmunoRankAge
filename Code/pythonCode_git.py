@@ -60,7 +60,7 @@ unsupervised_model = TabNetPretrainer(
 unsupervised_model.fit(
     X_train=x1,
     eval_set=[x2],
-    max_epochs=100 , patience=20,
+    max_epochs=100 , patience=10,
     batch_size=32, virtual_batch_size=128,
     num_workers=0,
     drop_last=False,
@@ -72,8 +72,8 @@ reg = TabNetRegressor()
 reg.fit(
     X_train=x1, y_train=np.expand_dims(y1,axis=1),
     eval_set=[(x2, np.expand_dims(y2,axis=1))],
-    max_epochs=200,
-    patience=20,
+    max_epochs=100,
+    patience=10,
     batch_size=8, 
     virtual_batch_size=64,
     num_workers=0,
