@@ -16,8 +16,7 @@ This model, operating in both CPU and GPU modes, quickly predicts 200 samples in
 - pandas == 1.3.5
 - pytorch-tabnet == 4.0
   
-**Note : 
-If cuda is available, GPU modes will be run automatically.**
+**Note: If cuda is available, GPU modes will be run automatically.**
   
 
 Tutorial
