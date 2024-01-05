@@ -44,7 +44,8 @@ python ImmunoRankAge_main.py --file_path /path/to/RNAseq.txt --norwayname tpm/co
 
 Citation
 -------
-Decoding Human Immune Aging Dynamics: Insights from PBMC Transcriptome and the ImmunoRankAge Model
+**Decoding Human Immune Aging Dynamics: Insights from PBMC Transcriptome and the ImmunoRankAge Model**
+
 
 Contacts
 -------
