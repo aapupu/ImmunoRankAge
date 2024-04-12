@@ -28,7 +28,8 @@ def AgePredict():
                   columns=['Age_pre'])
     outs['Age_pre'] = outs['Age_pre'].apply(lambda x: round(x))
     outs.to_csv('outs.csv')
-    # features.loc[,[]].to_csv('top30_features_es.csv')
+    top_features = pd.read_csv('Requirements/model_importance.csv',index_col=0)
+    features.loc[:,top_features.index[0:30]].to_csv('top30_features_es.csv')
     
 
 if __name__ == '__main__': 
