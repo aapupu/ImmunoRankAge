@@ -11,7 +11,7 @@ args = parser.parse_args()
 
 def Enrich(file_path, norwayname):
     run="Rscript Requirements/Calculate_enrichment_score.R " + file_path + " " + norwayname
-    #print(run)
+    # print(run)
     os.system(run)
 
 
@@ -26,15 +26,17 @@ def AgePredict():
     outs = pd.DataFrame(data=list(y), 
                   index = list(features.index),
                   columns=['Age_pre'])
+    outs['Age_pre'] = outs['Age_pre'].apply(lambda x: round(x))
     outs.to_csv('outs.csv')
-
+    # features.loc[,[]].to_csv('top30_features_es.csv')
+    
 
 if __name__ == '__main__': 
     start_total_time = time.time() 
     
     Enrich(args.file_path, args.norwayname)
     AgePredict()
-    #os.remove('enrich_score.csv')
+    # os.remove('enrich_score.csv')
     
     end_total_time = time.time()
     elapsed_total_time = end_total_time - start_total_time
