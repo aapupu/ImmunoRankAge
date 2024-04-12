@@ -37,7 +37,7 @@ if __name__ == '__main__':
     
     Enrich(args.file_path, args.norwayname)
     AgePredict()
-    # os.remove('enrich_score.csv')
+    os.remove('enrich_score.csv')
     
     end_total_time = time.time()
     elapsed_total_time = end_total_time - start_total_time
