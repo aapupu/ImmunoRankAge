@@ -79,11 +79,7 @@ receptors = lr_network %>% pull(to) %>% unique()
 #########
 CD4_Treg_sub <- CreateSeuratObject(counts = t(CD4_Treg_sub),min.cells = 0,min.features = 0)
 CD4_Treg_sub <- AddMetaData(object = CD4_Treg_sub,metadata = CD4_Treg_sub_meta)
-# CD4_Treg_sub <- NormalizeData(CD4_Treg_sub)
 
-###only.pos = T
-# DE_table_receiver <- FindMarkers(CD4_Treg_sub,ident.1 = "Frail",ident.2 = "Advanced Aged",group.by = "Group",logfc.threshold = 0.25, min.pct = 0.10) %>% rownames_to_column("gene")
-#geneset_oi = subset(DE_table_receiver,avg_log2FC>0) %>% pull(gene)
 geneset_oi = subset(CD4_Treg_deg,Frail_logfoldchanges>0.75) %>% pull(Frail_names)
 # geneset_oi = subset(CD4_Treg_deg,Frail_logfoldchanges<(-0.75)) %>% pull(Frail_names)
 # geneset_oi = get_expressed_genes(c('Advanced Aged','Frail'), CD4_Treg_sub, pct = 0.50,assay_oi = 'RNA')
@@ -124,9 +120,7 @@ vis_ligand_target = active_ligand_target_links[order_targets,order_ligands] %>% 
 p_ligand_target_network = vis_ligand_target %>% make_heatmap_ggplot("Prioritized ligands","Predicted target genes of CD4_Treg (Frail)", color = "#B2182B",legend_position = "right", x_axis_position = "top",legend_title = "Regulatory potential")  + 
   theme(axis.text.x = element_text(face = "italic"),axis.text=element_text(color='black')) + scale_fill_gradient2(low = "whitesmoke",  high = "#B2182B", breaks = c(0,0.0035,0.0070))
 p_ligand_target_network
-
-###
-#####
+#
 lr_network_top = lr_network %>% filter(from %in% best_upstream_ligands & to %in% expressed_receptors) %>% distinct(from,to)
 best_upstream_receptors = lr_network_top %>% pull(to) %>% unique()
 
@@ -184,12 +178,9 @@ cellchat_Frail <- identifyOverExpressedInteractions(cellchat_Frail)
 
 cellchat_Advanced_Aged <- identifyOverExpressedGenes(cellchat_Advanced_Aged)
 cellchat_Advanced_Aged <- identifyOverExpressedInteractions(cellchat_Advanced_Aged)
-
 #
-
 cellchat_Frail <- computeCommunProb(cellchat_Frail)
 cellchat_Frail <- filterCommunication(cellchat_Frail, min.cells = 2)
-
 cellchat_Advanced_Aged <- computeCommunProb(cellchat_Advanced_Aged)
 cellchat_Advanced_Aged <- filterCommunication(cellchat_Advanced_Aged, min.cells = 2)
 
@@ -202,9 +193,6 @@ cellchat_Advanced_Aged <- aggregateNet(cellchat_Advanced_Aged)
 
 cellchat_Frail <- netAnalysis_computeCentrality(cellchat_Frail, slot.name = "netP")
 cellchat_Advanced_Aged <- netAnalysis_computeCentrality(cellchat_Advanced_Aged, slot.name = "netP")
-###########
-cellchat_Frail <- updateCellChat(cellchat_Frail)
-cellchat_Advanced_Aged <- updateCellChat(cellchat_Advanced_Aged)
 
 # # Gini Clonality Shannon_index
 # gini_coef <- function(TCR_df) {
